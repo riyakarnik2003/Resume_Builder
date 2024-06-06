@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <title>Resume Generator</title>
+</head>
+<body>
+    
+<div class="container" id="cv">
+    
+    <h1 class="text-center my-2">Resume Generator</h1>
+<p class="text-center">By riyakarnik</p>
+    <div class="row">
+
+        <div class="col-md-6">
+            <h3>Personal Information</h3>
+            <div class="form-group mt-2">
+                <label for="nameField">Your Name</label>
+                <input type="text" class="form-control" id="nameField" placeholder="Enter Here">
+            </div>
+
+            <div class="form-group mt-2">
+                <label for="contactField">Your Contact</label>
+                <input type="text" class="form-control" id="contactField" placeholder="Enter Here">
+            </div>
+           
+
+            <div class="form-group mt-2">
+                <label for="contactField">Your Address</label>
+                <textarea  class="form-control" id="addressField" placeholder="Enter Here" rows="5"></textarea>
+            </div>
+
+            <p class="text-secondary my-3">Important Links</p>
+
+            <div class="form-group mt-2">
+                <label for="fbField">Facebook</label>
+                <input type="text" class="form-control" id="fbField" placeholder="Enter Here">
+            </div>
+
+            <div class="form-group mt-2">
+                <label for="instaField">Instagram</label>
+                <input type="text" class="form-control" id="instaField" placeholder="Enter Here">
+            </div>
+
+            <div class="form-group mt-2">
+                <label for="linkedinField">LinkedIn</label>
+                <input type="text" class="form-control" id="linkedField" placeholder="Enter Here">
+            </div>
+
+    </div>
+
+    <div class="col-md-6">
+        <h3>Professional Information</h3>
+        <div class="form-group mt-2">
+            <label for="">Objective</label>
+            <textarea  class="form-control" placeholder="Enter Here" rows="5" id="objectiveField"></textarea>
+        </div>
+
+        <div class="form-group mt-2" id="we">
+            <label for="">Work Experience</label>
+            <textarea  class="form-control weField" placeholder="Enter Here" rows="5"></textarea>
+
+            <div class="container text-center" id="weButton">
+                <button onclick="addWorkExp()" class="btn btn-primary mt-2" >Add</button>
+            </div>
+        
+        </div>
+
+            <div class="form-group mt-2" id="aq">
+                <label for="">Academic Qualification</label>
+                <textarea  class="form-control aqField" placeholder="Enter Here" rows="5"></textarea>
+
+                <div class="container text-center" id="aqButton">
+                    <button  onclick="addAQ()" class="btn btn-primary mt-2" >Add</button>
+                </div>
+            </div>
+    
+
+    </div>
+
+
+    <div class="container text-center mt-3">
+        <button onclick="generateCV()" class="btn btn-primary btn-lg">Generate CV</button>
+    </div>
+</div>
+
+<!--cv temp -->
+<div class="container" id="temp">
+    <div class="row">
+
+        <div class="col-md-4 text-center py-5 background">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgULeQbd6r1j47wvd78gMt1-P2JVN5KLySAAl-4ZoA-Q&s" alt="" 
+            class="img-fluid myimg"/>
+
+            <div class="container">
+                <p id="nameT1">Riya Karnik</p>
+                <p id="contactT">+91 12345678</p>
+                <p id="addressT">Vadodara,Gujarat</p>
+
+                <hr/>
+                <p><a id="fbT" href="#1">https://www.facebook.com/</a></p>
+                <p><a id="instaT" href="#1">https://www.instagram.com/</a></p>
+                <p><a id="linkedT" href="#1">https://www.linkedin.com/in/riya-karnik-75b953258/</a></p>
+               
+            </div>
+
+        </div>
+
+        <div class="col-md-8 py-5">
+            <h1 id="nameT2" class="text-center" style="font-weight: 980;">
+                
+                Riya Karnik
+            
+            </h1>
+
+            <!-- objective -->
+        <div class="card mt-4">
+            <div class="card-header background">
+                <h3>Objective</h3>
+            </div>
+            <div class="card-body">
+                <p id="objT">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Voluptatem minima magnam, explicabo enim libero repellendus et tempore commodi 
+                    officia voluptates, debitis dolore. Neque commodi omnis repellendus. Sapiente facilis ipsam minima!
+                </p>
+            </div>
+        </div>
+
+        <!-- work exp -->
+
+        <div class="card mt-4">
+            <div class="card-header background">
+                <h3>Work Experience</h3>
+            </div>
+            <div class="card-body">
+                <ul id="weT">
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur ullam quisquam eum sunt libero molestias saepe consequatur inventore, recusandae dolore earum suscipit voluptatum a. Aliquid vero eum illum ratione!</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Academic qualification -->
+
+        <div class="card mt-4">
+            <div class="card-header background">
+                <h3>Academic Qualification</h3>
+            </div>
+            <div class="card-body">
+                <ul id="aqT">
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur ullam quisquam eum sunt libero molestias saepe consequatur inventore, recusandae dolore earum suscipit voluptatum a. Aliquid vero eum illum ratione!</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container mt-3 text-center">
+
+            <button onclick="printCV()" class="btn background">
+                Print CV
+            </button>
+
+        </div>
+
+        </div>
+
+    </div>
+    
+    </div>
+    
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+
+
+
+</body>
+</html>
